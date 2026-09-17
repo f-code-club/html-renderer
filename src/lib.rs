@@ -8,6 +8,7 @@ pub async fn render(html: &str, width: u32, height: u32) -> chromiumoxide::error
     let (mut browser, mut handler) = Browser::launch(
         BrowserConfig::builder()
             .new_headless_mode()
+            .no_sandbox()
             .viewport(Some(Viewport {
                 width,
                 height,
