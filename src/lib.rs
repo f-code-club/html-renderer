@@ -31,7 +31,7 @@ pub async fn render(html: &str, width: u32, height: u32) -> chromiumoxide::error
         .screenshot(
             ScreenshotParams::builder()
                 .format(CaptureScreenshotFormat::Png)
-                .full_page(true)
+                .full_page(false)
                 .omit_background(true)
                 .build(),
         )
